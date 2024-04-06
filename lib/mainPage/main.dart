@@ -1,3 +1,5 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
 import 'package:second_screen_test/charactersPage/johnny_page.dart';
 import 'package:second_screen_test/charactersPage/judy_page.dart';
@@ -5,7 +7,6 @@ import 'package:second_screen_test/charactersPage/panam_page.dart';
 import 'package:second_screen_test/charactersPage/rogue_page.dart';
 
 void main() => runApp(const MainApp());
-
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
@@ -38,13 +39,17 @@ class _StartPageState extends State<StartPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              const SizedBox(height: 30.0,),
+              const SizedBox(
+                height: 30.0,
+              ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 20),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 12, vertical: 20),
                 child: ElevatedButton(
                   style: buttonsStyle(),
-                  onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
                       return const JudyPage();
                     }));
                   },
@@ -60,8 +65,9 @@ class _StartPageState extends State<StartPage> {
                       ),
                       Column(
                         children: [
-                          insideContainer('Judy Alvarez'),
-                          insideContainer('Best braindancer in all NC'),
+                          insideContainer('Judy Alvarez', context),
+                          insideContainer(
+                              'Best braindancer in all NC', context),
                         ],
                       ),
                     ],
@@ -69,11 +75,13 @@ class _StartPageState extends State<StartPage> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 20),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 12, vertical: 20),
                 child: ElevatedButton(
                   style: buttonsStyle(),
-                  onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
                       return const PanamPage();
                     }));
                   },
@@ -81,8 +89,9 @@ class _StartPageState extends State<StartPage> {
                     children: [
                       Column(
                         children: [
-                          insideContainer('Panam Palmer'),
-                          insideContainer('Most loyal Nomad you\'ll ever find'),
+                          insideContainer('Panam Palmer', context),
+                          insideContainer(
+                              'Most loyal Nomad you\'ll ever find', context),
                         ],
                       ),
                       const CircleAvatar(
@@ -98,11 +107,13 @@ class _StartPageState extends State<StartPage> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 20),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 12, vertical: 20),
                 child: ElevatedButton(
                   style: buttonsStyle(),
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
                       return const JohnnyPage();
                     }));
                   },
@@ -118,8 +129,8 @@ class _StartPageState extends State<StartPage> {
                       ),
                       Column(
                         children: [
-                          insideContainer('Johnny Silverhand'),
-                          insideContainer('Terrorist and Rock Boy')
+                          insideContainer('Johnny Silverhand', context),
+                          insideContainer('Terrorist and Rock Boy', context)
                         ],
                       ),
                     ],
@@ -127,11 +138,13 @@ class _StartPageState extends State<StartPage> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 20),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 12, vertical: 20),
                 child: ElevatedButton(
                   style: buttonsStyle(),
-                  onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
                       return const RoguePage();
                     }));
                   },
@@ -139,8 +152,9 @@ class _StartPageState extends State<StartPage> {
                     children: [
                       Column(
                         children: [
-                          insideContainer('Rogue Amendiares'),
-                          insideContainer('Best fixer with the best gigs'),
+                          insideContainer('Rogue Amendiares', context),
+                          insideContainer(
+                              'Best fixer with the best gigs', context),
                         ],
                       ),
                       const CircleAvatar(
@@ -155,7 +169,9 @@ class _StartPageState extends State<StartPage> {
                   ),
                 ),
               ),
-              const SizedBox(height: 30.0,),
+              const SizedBox(
+                height: 30.0,
+              ),
             ],
           ),
         ),
@@ -164,7 +180,7 @@ class _StartPageState extends State<StartPage> {
   }
 }
 
-AppBar appBarStyle(){
+AppBar appBarStyle() {
   return AppBar(
     title: const Text(
       'Cyberpunk Characters',
@@ -179,7 +195,7 @@ AppBar appBarStyle(){
   );
 }
 
-AppBar appBarComeback(BuildContext context){
+AppBar appBarComeback(BuildContext context) {
   return AppBar(
     title: const Text(
       'Cyberpunk Characters',
@@ -192,20 +208,23 @@ AppBar appBarComeback(BuildContext context){
     centerTitle: true,
     backgroundColor: const Color.fromRGBO(2, 46, 65, 1),
     leading: IconButton(
-      icon: const Icon(Icons.arrow_back, color: Colors.white,),
+      icon: const Icon(
+        Icons.arrow_back,
+        color: Colors.white,
+      ),
       onPressed: () => Navigator.pop(context),
     ),
   );
 }
 
-Container insideContainer(String phrase){
+Container insideContainer(String phrase, BuildContext context) {
   return Container(
-    width: 240.0,
+    width: MediaQuery.of(context).size.width * 0.6,
     margin: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 5.0),
     padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
     decoration: BoxDecoration(
-    borderRadius: BorderRadius.circular(12.0),
-    color: Color.fromRGBO(251, 254, 255, 1),
+      borderRadius: BorderRadius.circular(12.0),
+      color: Color.fromRGBO(251, 254, 255, 1),
     ),
     child: Text(
       phrase,
@@ -218,7 +237,7 @@ Container insideContainer(String phrase){
   );
 }
 
-ButtonStyle buttonsStyle(){
+ButtonStyle buttonsStyle() {
   return ElevatedButton.styleFrom(
     backgroundColor: Color.fromRGBO(61, 61, 61, 1),
     padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
