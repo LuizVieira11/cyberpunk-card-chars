@@ -34,7 +34,7 @@ class _StartPageState extends State<StartPage> {
     return SafeArea(
       child: Scaffold(
         appBar: appBarStyle(),
-        backgroundColor: const Color.fromRGBO(0, 191, 255, 1),
+        backgroundColor: const Color.fromRGBO(255, 36, 0, 1),
         body: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -191,7 +191,7 @@ AppBar appBarStyle() {
       ),
     ),
     centerTitle: true,
-    backgroundColor: const Color.fromRGBO(2, 46, 65, 1),
+    backgroundColor: const Color.fromRGBO(61, 61, 61, 1),
   );
 }
 
@@ -206,7 +206,7 @@ AppBar appBarComeback(BuildContext context) {
       ),
     ),
     centerTitle: true,
-    backgroundColor: const Color.fromRGBO(2, 46, 65, 1),
+    backgroundColor: const Color.fromRGBO(61, 61, 61, 1),
     leading: IconButton(
       icon: const Icon(
         Icons.arrow_back,
@@ -239,7 +239,7 @@ Container insideContainer(String phrase, BuildContext context) {
 
 ButtonStyle buttonsStyle() {
   return ElevatedButton.styleFrom(
-    backgroundColor: Color.fromRGBO(61, 61, 61, 1),
+    backgroundColor: const Color.fromRGBO(61, 61, 61, 1),
     padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(12.0),

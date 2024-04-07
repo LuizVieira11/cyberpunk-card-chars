@@ -17,7 +17,7 @@ class JudyPage extends StatelessWidget {
         home: SafeArea(
       child: Scaffold(
         appBar: appBarComeback(context),
-        backgroundColor: const Color.fromRGBO(0, 191, 255, 1),
+        backgroundColor: const Color.fromRGBO(255, 36, 0, 1),
         body: SingleChildScrollView(
           child: Center(
             child: Column(
@@ -26,7 +26,7 @@ class JudyPage extends StatelessWidget {
                   height: 50,
                 ),
                 CircleAvatar(
-                  backgroundColor: Color.fromRGBO(255, 36, 0, 1),
+                  backgroundColor: Color.fromRGBO(61, 61, 61, 1),
                   radius: 100,
                   child: CircleAvatar(
                     backgroundImage: AssetImage('images/judy.png'),
