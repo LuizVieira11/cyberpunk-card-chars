@@ -1,5 +1,3 @@
-import 'dart:js';
-
 import 'package:flutter/material.dart';
 import 'package:second_screen_test/charactersPage/johnny_page.dart';
 import 'package:second_screen_test/charactersPage/judy_page.dart';
@@ -219,7 +217,7 @@ AppBar appBarComeback(BuildContext context) {
 
 Container insideContainer(String phrase, BuildContext context) {
   return Container(
-    width: MediaQuery.of(context).size.width * 0.6,
+    width: MediaQuery.of(context).size.width - 185,
     margin: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 5.0),
     padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
     decoration: BoxDecoration(
