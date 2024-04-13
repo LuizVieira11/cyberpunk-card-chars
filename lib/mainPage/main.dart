@@ -42,7 +42,7 @@ class _StartPageState extends State<StartPage> {
               ),
               Padding(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 12, vertical: 20),
+                    const EdgeInsets.symmetric(horizontal: 12, vertical: 15),
                 child: ElevatedButton(
                   style: buttonsStyle(),
                   onPressed: () {
@@ -74,7 +74,7 @@ class _StartPageState extends State<StartPage> {
               ),
               Padding(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 12, vertical: 20),
+                    const EdgeInsets.symmetric(horizontal: 12, vertical: 15),
                 child: ElevatedButton(
                   style: buttonsStyle(),
                   onPressed: () {
@@ -106,7 +106,7 @@ class _StartPageState extends State<StartPage> {
               ),
               Padding(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 12, vertical: 20),
+                    const EdgeInsets.symmetric(horizontal: 12, vertical: 15),
                 child: ElevatedButton(
                   style: buttonsStyle(),
                   onPressed: () {
@@ -137,7 +137,7 @@ class _StartPageState extends State<StartPage> {
               ),
               Padding(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 12, vertical: 20),
+                    const EdgeInsets.symmetric(horizontal: 12, vertical: 15),
                 child: ElevatedButton(
                   style: buttonsStyle(),
                   onPressed: () {
@@ -228,7 +228,7 @@ Container insideContainer(String phrase, BuildContext context) {
       phrase,
       style: const TextStyle(
         fontWeight: FontWeight.bold,
-        fontSize: 16.5,
+        fontSize: 20,
         color: Colors.black,
       ),
     ),

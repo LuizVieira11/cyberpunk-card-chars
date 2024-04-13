@@ -19,10 +19,10 @@ class JudyPage extends StatelessWidget {
           child: Center(
             child: Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 50,
                 ),
-                CircleAvatar(
+                const CircleAvatar(
                   backgroundColor: Color.fromRGBO(61, 61, 61, 1),
                   radius: 100,
                   child: CircleAvatar(
@@ -30,24 +30,24 @@ class JudyPage extends StatelessWidget {
                     radius: 90,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Container(
-                  padding: EdgeInsets.symmetric(vertical: 20),
+                  padding: const EdgeInsets.symmetric(vertical: 20),
                   margin: EdgeInsets.symmetric(
                     horizontal: reducedWidth,
                     vertical: 10,
                   ),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
-                    color: Color.fromRGBO(251, 254, 255, 1),
+                    color: const Color.fromRGBO(251, 254, 255, 1),
                   ),
                   child: Column(
                     children: [
-                      Text(
+                      const Text(
                         'Judy Alvarez',
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 30,
                           color: Colors.black,
@@ -58,7 +58,7 @@ class JudyPage extends StatelessWidget {
                           horizontal: reducedWidth,
                           vertical: 15.0,
                         ),
-                        child: Text(
+                        child: const Text(
                           'Judy\'s story is a tale of resilience, skill, and the search for belonging in the chaotic world of Night City.',
                           style: TextStyle(
                             fontSize: 20,
@@ -69,7 +69,7 @@ class JudyPage extends StatelessWidget {
                       listTileStyle(
                         title: 'Early Years',
                         text:
-                            'Judy was born in Laguna Bend and raised by her grandparents after her mother\’s death. Her grandfather, a techie, taught her everything she knows.',
+                            'Judy was born in Laguna Bend and raised by her grandparents after her mother’s death. Her grandfather, a techie, taught her everything she knows.',
                         pad: reducedWidth,
                       ),
                       listTileStyle(
@@ -121,19 +121,19 @@ Padding listTileStyle(
       collapsedBackgroundColor: Colors.blueGrey.shade200,
       title: Text(
         title,
-        style: TextStyle(
+        style: const TextStyle(
           fontWeight: FontWeight.bold,
           fontSize: 25,
         ),
       ),
-      childrenPadding: EdgeInsets.symmetric(
+      childrenPadding: const EdgeInsets.symmetric(
         horizontal: 10,
         vertical: 10,
       ),
       children: [
         Text(
           text,
-          style: TextStyle(fontSize: 20, color: Colors.black),
+          style: const TextStyle(fontSize: 20, color: Colors.black),
         ),
       ],
     ),
