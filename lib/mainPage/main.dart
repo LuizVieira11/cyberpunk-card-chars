@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:second_screen_test/charactersPage/johnny_page.dart';
-import 'package:second_screen_test/charactersPage/judy_page.dart';
-import 'package:second_screen_test/charactersPage/panam_page.dart';
-import 'package:second_screen_test/charactersPage/rogue_page.dart';
+import '/charactersPage/johnny_page.dart';
+import '/charactersPage/judy_page.dart';
+import '/charactersPage/panam_page.dart';
+import '/charactersPage/rogue_page.dart';
 
 void main() => runApp(const MainApp());
 
@@ -58,7 +58,7 @@ class _StartPageState extends State<StartPage> {
                         backgroundColor: Color.fromRGBO(255, 36, 0, 1),
                         child: CircleAvatar(
                           radius: 45.0,
-                          backgroundImage: AssetImage('images/judy.png'),
+                          backgroundImage: AssetImage('lib/images/judy.png'),
                         ),
                       ),
                       Column(
@@ -97,7 +97,7 @@ class _StartPageState extends State<StartPage> {
                         backgroundColor: Color.fromRGBO(255, 36, 0, 1),
                         child: CircleAvatar(
                           radius: 45.0,
-                          backgroundImage: AssetImage('images/panam.png'),
+                          backgroundImage: AssetImage('lib/images/panam.png'),
                         ),
                       ),
                     ],
@@ -122,7 +122,7 @@ class _StartPageState extends State<StartPage> {
                         backgroundColor: Color.fromRGBO(255, 36, 0, 1),
                         child: CircleAvatar(
                           radius: 45.0,
-                          backgroundImage: AssetImage('images/johnny.png'),
+                          backgroundImage: AssetImage('lib/images/johnny.png'),
                         ),
                       ),
                       Column(
@@ -160,7 +160,7 @@ class _StartPageState extends State<StartPage> {
                         backgroundColor: Color.fromRGBO(255, 36, 0, 1),
                         child: CircleAvatar(
                           radius: 45.0,
-                          backgroundImage: AssetImage('images/rogue.png'),
+                          backgroundImage: AssetImage('lib/images/rogue.png'),
                         ),
                       ),
                     ],

@@ -1,8 +1,5 @@
-import 'dart:js';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:second_screen_test/mainPage/main.dart';
+import '/mainPage/main.dart';
 
 void main() => runApp(const JudyPage());
 
@@ -29,7 +26,7 @@ class JudyPage extends StatelessWidget {
                   backgroundColor: Color.fromRGBO(61, 61, 61, 1),
                   radius: 100,
                   child: CircleAvatar(
-                    backgroundImage: AssetImage('images/judy.png'),
+                    backgroundImage: AssetImage('lib/images/judy.png'),
                     radius: 90,
                   ),
                 ),
@@ -70,10 +67,29 @@ class JudyPage extends StatelessWidget {
                         ),
                       ),
                       listTileStyle(
-                          title: 'Early Years',
-                          text:
-                              'Judy was born in Laguna Bend and raised by her grandparents after her mother\’s death. Her grandfather, a techie, taught her everything she knows.',
-                          pad: reducedWidth)
+                        title: 'Early Years',
+                        text:
+                            'Judy was born in Laguna Bend and raised by her grandparents after her mother\’s death. Her grandfather, a techie, taught her everything she knows.',
+                        pad: reducedWidth,
+                      ),
+                      listTileStyle(
+                        title: 'Turbulent Adolescence',
+                        text:
+                            'She faced mockery for being poor and parentless. At sixteen, she was wrongfully detained for “stealing” a fire truck she actually repaired',
+                        pad: reducedWidth,
+                      ),
+                      listTileStyle(
+                        title: 'Life in Night City',
+                        text:
+                            'Judy moved to Night City with her grandparents, who later left for Oregon. She stayed, becoming a skilled braindance technician and joining the Mox gang.',
+                        pad: reducedWidth,
+                      ),
+                      listTileStyle(
+                        title: 'Romantic Turmoil',
+                        text:
+                            'Judy had a tumultuous relationship with Maiko Maeda, which ended bitterly. She also formed a close bond with Evelyn Parker, whose tragic fate deeply affected her.',
+                        pad: reducedWidth,
+                      ),
                     ],
                   ),
                 ),
@@ -91,7 +107,7 @@ Padding listTileStyle(
   return Padding(
     padding: EdgeInsets.symmetric(
       horizontal: pad,
-      vertical: 2,
+      vertical: 10,
     ),
     child: ExpansionTile(
       shape: RoundedRectangleBorder(

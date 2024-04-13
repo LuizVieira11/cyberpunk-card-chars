@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:second_screen_test/mainPage/main.dart';
+import '/mainPage/main.dart';
 
 void main() => runApp(const PanamPage());
 
